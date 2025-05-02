@@ -23,7 +23,6 @@ export default function ProductImage() {
         sync: 1,
         enter: "100% -40%",
         leave: "55% 35%",
-        debug: true
       };
 
       animate(".open-bag-anime", {
