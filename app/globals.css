@@ -1,26 +1,72 @@
 @import "tailwindcss";
-
+html {
+  scroll-behavior: smooth;
+}
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --primary: #39351e;
+  --background: #f4eae0;
+  --border-color: #cfbe87;
+  --second-color: #61582a;
+  --text-color: #301f1a;
+  --gradient-color: #885946;
+  --third-color: #be9979;
+  --first-linear-color: #e3d5c5;
+  --second-linear-color: #d1b9a0;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.subFont {
+  font-family: var(--font-roboto-sans);
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.link{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.gradient-background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 7.3rem;
+  left: 0;
+  background: linear-gradient(to top, var(--gradient-color) 0%, transparent);
+}
+.wrapper-page {
+  padding: 0 20px;
+}
+.header-section {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--primary);
+  padding: 0.6rem;
+  font-size: 2.4rem;
+  font-weight: 800;
+}
+@media (max-width: 680px) {
+  .header-section{
+    font-size: 2.2rem;
+    padding: 0.3rem;
   }
 }
+@media (max-width: 500px) {
+  .wrapper-page {
+    top: 180px;
+    padding: 0 12px;
+  }
+}
+@theme inline {
+  --color-background: var(--background);
+  --color-border-color: var(--border-color);
+  --color-second-color: var(--second-color);
+  --color-text-color: var(--text-color);
+  --color-gradient-color: var(--gradient-color);
+  --color-third-color: var(--third-color);
+  --color-first-linear: var(--first-linear-color);
+  --color-second-linear: var(--second-linear-color);
+}
+
+
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
