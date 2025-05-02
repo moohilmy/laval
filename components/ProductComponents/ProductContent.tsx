@@ -27,7 +27,7 @@ export default function ProductContent() {
                 opacity: { duration: .5, delay: .5 * index, ease: "linear" },
                 y: {duration: 1, delay: .1 * index, ease: "linear" }
               }}
-              viewport={{amount: .2 , once: true}}
+              viewport={{amount: 1 , once: true}}
               key={index} className={`${styles.productItem}`}>
               <Image src={'/loofeh-mockup.png'} alt="product-image" height={500} width={500} style={{
                 height: '100%',
