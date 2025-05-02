@@ -21,8 +21,9 @@ export default function ProductImage() {
         container: ".product-image-container",
         target: ".open-bag-anime",
         sync: 1,
-        enter: "100% 40%%",
-        leave: "60% 35%",
+        enter: "80% -25%",
+        leave: "55% 35%",
+        debug: true
       };
 
       animate(".open-bag-anime", {
@@ -36,8 +37,8 @@ export default function ProductImage() {
   return (
     <motion.div
     initial={{opacity: 0}}
-    whileInView={{opacity: 1}}
-    viewport={{once: true,amount: 0.2}}
+    animate={{opacity: 1}}
+    viewport={{once: true}}
     >
       <div
         ref={root}

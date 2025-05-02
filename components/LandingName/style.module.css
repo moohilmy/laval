@@ -37,3 +37,9 @@ overflow: hidden;
     color: var(--primary);
 
 }
+@media (max-width: 768px) {
+    .LandingNameSection{
+        margin: 1rem auto;
+        padding: 1rem 0;
+    }
+}
