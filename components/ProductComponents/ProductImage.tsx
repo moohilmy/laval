@@ -21,7 +21,7 @@ export default function ProductImage() {
         container: ".product-image-container",
         target: ".open-bag-anime",
         sync: 1,
-        enter: "80% -25%",
+        enter: "100% -40%",
         leave: "55% 35%",
         debug: true
       };
