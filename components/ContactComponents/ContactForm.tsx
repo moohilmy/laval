@@ -42,9 +42,9 @@ const ContactForm = () => {
       } else {
         toast.error("Failed to send email");
       }
-    } catch (error: any) {
+    } catch (error: unknown) {
       console.error("Error sending email:", error);
-      toast.error(error?.message || "An unexpected error occurred");
+      toast.error(error as string|| "An unexpected error occurred");
     }
   };
 
