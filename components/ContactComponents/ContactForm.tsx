@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
 import { motion } from "framer-motion";
@@ -40,11 +40,15 @@ const ContactForm = () => {
       if (result.success) {
         toast.success("Email sent successfully!");
       } else {
-        toast.error("Failed to send email");
+        toast.error("Failed to send email.");
       }
     } catch (error: unknown) {
       console.error("Error sending email:", error);
-      toast.error(error as string|| "An unexpected error occurred");
+      if (error instanceof Error) {
+        toast.error(error.message);
+      } else {
+        toast.error("An unexpected error occurred");
+      }
     }
   };
 

@@ -39,7 +39,6 @@
     transition: all .25s;
 }
 .submitBtn:hover{
-    transform: scale(1.1);
     background-color: var(--primary);
 }
 @media (max-width: 680px){
