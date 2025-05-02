@@ -24,7 +24,7 @@ export default function ProductContent() {
               initial={{opacity: 0, y: -200}}
               whileInView={{opacity: 1, y: 0}}
               transition={{
-                opacity: { duration: .5, delay: 1 * index, ease: "linear" },
+                opacity: { duration: .5, delay: .5 * index, ease: "linear" },
                 y: {duration: 1, delay: .1 * index, ease: "linear" }
               }}
               viewport={{amount: .2 , once: true}}
