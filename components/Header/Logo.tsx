@@ -2,11 +2,12 @@
 
 import Image from "next/image"
 import styles from './styles.module.css'
+import logoImg from '@/public/logo-symbol.png'
 import { motion } from "framer-motion";
 export default function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <Image priority={true}  className={styles.logoImg} src={'/logo-symbol.png'}  alt="logo-name" width={45} height={45}/>
+      <Image priority={true}  className={styles.logoImg} src={logoImg}  alt="logo-name" width={45} height={45}/>
       <motion.p
       initial={{opacity: 0 , x: -40}}
       whileInView={{opacity: 1, x: 0}}
