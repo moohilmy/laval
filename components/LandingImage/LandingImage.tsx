@@ -110,7 +110,7 @@ export default function LandingImage() {
                 y: { duration: 1, delay: .25, ease: 'linear' },
               }}
           >
-            <Image priority={true} unoptimized fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="bag" src={bagImage}  style={{
+            <Image priority={true}  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="bag" src={bagImage}  style={{
               objectFit: 'contain'
             }}/>
           </motion.div>

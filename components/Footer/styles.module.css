@@ -3,7 +3,7 @@
     justify-content: space-between;
     align-items: center;
     background: var(--third-color);
-    color: var(--background);
+    color: var(--text-color);
     display: flex;
 }
 .copyrightText,.Devlink{
@@ -14,6 +14,8 @@
 }
 .Devlink{
     position: relative;
+    display: flex;
+    gap: .2rem;
 }
 @media (max-width: 680px){
     .footer{

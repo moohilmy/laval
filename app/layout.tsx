@@ -3,12 +3,11 @@ import { Cinzel, Roboto} from "next/font/google";
 import "./globals.css";
 import React from "react";
 import { Footer, Header } from "@/components";
-
+import { ToastContainer } from 'react-toastify';
 const cinzel = Cinzel({
-  variable: "--font-geist-sans",
+  variable: "--font-Cinzel",
   subsets: ["latin"],
 });
-
 
 const subFont = Roboto({
   variable: '--font-roboto-sans',
@@ -30,6 +29,7 @@ export default function RootLayout({
         className={`${cinzel.className} ${subFont.variable} antialiased`}
       >
         <Header/>
+        <ToastContainer/>
         <div>
         {children}
         <Footer/>
