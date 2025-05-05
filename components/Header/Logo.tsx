@@ -1,19 +1,17 @@
 'use client'
 
 import Image from "next/image"
-import logoSymbol from '@/public/logo-symbol.png'
 import styles from './styles.module.css'
 import { motion } from "framer-motion";
 export default function Logo() {
   return (
     <div className={styles.logoContainer}>
-      <Image className={styles.logoImg} src={logoSymbol}  alt="logo-name" width={55} height={55}/>
+      <Image priority={true}  className={styles.logoImg} src={'/logo-symbol.png'}  alt="logo-name" width={45} height={45}/>
       <motion.p
       initial={{opacity: 0 , x: -40}}
       whileInView={{opacity: 1, x: 0}}
       transition={{
-        opacity: { duration: .5, delay: .2 , ease: "linear" },
-        x: {duration: .5, delay: 0 , ease: "linear" }
+
       }}
       viewport={{once: true}}
       className={styles.logoText}

@@ -1,7 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
-import { motion } from "framer-motion";
 import styles from "./styles.module.css";
 
 interface NavLinksProps {
@@ -51,24 +50,19 @@ export default function NavLinks({ links }: NavLinksProps) {
       </button>
 
       <ul className={`${styles.navList} ${isMenuOpen ? styles.navListActive : ""}`}>
-        {links.map((link, i) => {
-          const sectionId = link.toLowerCase();
-          return (
-            <motion.li
-              key={sectionId}
+        {links.map((link) => (
+            <li
+              key={link.toLowerCase()}
               className={styles.navItem}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: i * 0.1 }}
               onClick={() => {
                 setIsMenuOpen(false);
-                scrollToSection(sectionId);
+                scrollToSection(link.toLowerCase());
               }}
             >
-              {link}
-            </motion.li>
-          );
-        })}
+              {link.toLowerCase()}
+            </li>
+          )
+        )}
       </ul>
     </nav>
   );

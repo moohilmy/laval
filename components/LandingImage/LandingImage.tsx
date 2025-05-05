@@ -4,7 +4,9 @@ import { motion } from "framer-motion";
 import { useEffect, useRef } from "react";
 import { animate, createScope, onScroll } from "animejs";
 import styles from "./style.module.css";
-import bagImage from '@/public/bag.svg'
+import bagImage from '@/public/bag.png'
+import bgImage from "@/public/landing-back-ground.png"
+import frontImg from "@/public/Landing-front.png";
 type AnimeScope = {
     add: (callback: () => void) => void;
   };
@@ -60,9 +62,9 @@ export default function LandingImage() {
             <Image
               fill
               className={`${styles.backGroundImg} swep-animate`}
-              alt="fa"
-              src={"/landing-back-ground.png"}
-              
+              alt="background-img"
+              src={bgImage}
+              priority={true} 
             />
           </motion.div>
           <motion.div
@@ -76,9 +78,10 @@ export default function LandingImage() {
           >
             <Image
               fill
-              alt="fa"
+              alt="background-img"
               className={`${styles.backGroundImg} swep-animate`}
-              src={"/landing-back-ground.png"}
+              src={bgImage} 
+              priority={true} 
               style={{transform: 'scaleX(-1)'}}
             />
           </motion.div>
@@ -95,7 +98,7 @@ export default function LandingImage() {
             opacity: { duration: 1.2, delay: 0, ease: "linear" }, // تظهر في ثانية
           }}
         >
-          <Image fill alt="front" src={"/Landing-front.png"} style={{ objectFit: "cover" }} />
+          <Image fill priority={true}  alt="front" src={frontImg} style={{ objectFit: "cover" }} />
         </motion.div>
 
         {/* Bag Image */}

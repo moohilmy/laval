@@ -9,6 +9,7 @@ type AnimeScope = {
   add: (callback: () => void) => void;
 };
 
+
 export default function ProductImage() {
   const root = useRef(null);
   const scope = useRef<AnimeScope | null>(null);
@@ -48,7 +49,7 @@ export default function ProductImage() {
             fill
             src={openBagSrc}
             alt="open-bag"
-            priority={true}
+            loading="lazy"
             style={{
               objectFit: "contain",
               transform: "scaleY(-1)",
