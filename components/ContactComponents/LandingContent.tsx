@@ -8,12 +8,12 @@ export default function LandingContent() {
   return (
     <div className={styles.landingContentSection}>
       <motion.div
-      initial={{opacity: 0 , x: 400}}
-      whileInView={{opacity: 1, x: 0}}
+      initial={{opacity: 0 , }}
+      whileInView={{opacity: 1,}}
        transition={{
-          opacity: { duration: 1, delay: .2, ease: "linear" },
+          opacity: { duration: .8, ease: "linear" },
         }}
-    viewport={{amount: .2 , once: true}}
+    viewport={{once: true}}
       
       >
         <Image
