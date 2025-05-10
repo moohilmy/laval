@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import styles from './styles.module.css'
-import logoImg from '@/public/logo-symbol.png'
+import logoImg from '@/public/logo-symbol.svg'
 import { motion } from "framer-motion";
 export default function Logo() {
   return (

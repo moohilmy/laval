@@ -16,6 +16,7 @@ html {
 .subFont {
   font-family: var(--font-roboto-sans);
 }
+
 .link{
   position: absolute;
   top: 0;
@@ -50,7 +51,6 @@ html {
 }
 @media (max-width: 500px) {
   .wrapper-page {
-    top: 180px;
     padding: 0 12px;
   }
 }

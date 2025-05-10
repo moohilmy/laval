@@ -1,80 +1,42 @@
-.TestimonialCard{
-    position: relative;
-    background: var(--third-color);
-    padding: .8rem;
-    display: flex;
-    border-radius: 1.2rem;
-    align-items: center;
-    width: calc((100% - 2 * 1.2rem) / 3);
-    max-height: 26rem;
-    aspect-ratio: 1;
-    justify-content: space-between;
-    flex-direction: column;
-    
-}
-.TestimonialCardHero{
-    position: relative;
-    height: 125px;
-    margin-top: calc(-125px /2);
-    overflow: hidden;
-    aspect-ratio: 1/1;
-    z-index: 2;
-    border-radius: 50%;
-    background: var(--second-color)
-}
-.TestimonialText{
-    text-align: center;
-    font-size: 1.3rem;
-    font-weight: 700;
-    line-height: 2.1;
-    position: relative;
-    color: var(--text-color);
-    z-index: 2;
-}
-.TestimonialCard::after{
-    content: "";
-    background-image: url(/quote-icon.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    width: 9rem;
-    aspect-ratio: 1;
-    position: absolute;
-    top: 40px;
-    left: 15px;
-    opacity: .4;
-}
-.TestimonialName{
-    font-size: 1.5rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    margin: 1.4rem 0;
-    color: var(--text-color);
-}
-@media (max-width : 1020px) {
-    .TestimonialCard {
-        width: calc((100% - 1 * 1.2rem) / 2);
-    }
-}
-@media (max-width: 680px){
-    .TestimonialCard {
-        width: 100%;
-        max-height: 17rem;
+.TestamonialCard {
+  display: flex;
+  flex-direction: row;
 
-    }
-    .TestimonialCardHero{
-        height: 80;
-        margin-top: calc(-80px /2);
-        line-height: 1.6;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  background-color: var(--border-color);
+}
+.TestimonialCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.TestamonialName {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+.TestamonialDescription {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--text-color);
+}
+.TestimonialCardImage {
+  position: relative;
 
-    }
-    .TestimonialText{
-        font-size: .8rem;
-    }
-    .TestimonialCard::after{
-        width: 6rem;
-    }
-    .TestimonialName{
-        font-size: 1rem;
-        margin: .7rem 0;
-    }
+  height: 100%;
+}
+.TestimonialCardImageContainer{
+    mask-image: url("/image-mask.png");
+    mask-position: center;
+    mask-size: cover;
+    mask-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+      mask-mode: alpha;
+}
+@media (max-width: 1020px) {
+}
+@media (max-width: 680px) {
 }

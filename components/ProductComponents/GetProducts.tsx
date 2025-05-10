@@ -1,29 +1,24 @@
 import React from "react";
-import { ProductsList } from "./data";
 import Image from "next/image";
-import styles from './style.module.css'
-import Link from "next/link";
+import styles from "./style.module.css";
 export default function GetProducts() {
   return (
-    <section className={styles.getProductSection}>
-      <ul className={styles.getproductList}>
-        {ProductsList.map(({image,title,link},index) => (
-          <li className={styles.getproductItem} key={index}>
-            <div className='gradient-background'/>
-            <div className={styles.getproductItemImage}>
-              <Image src={image} alt={title} width={650} height={650} style={{
-                height: '100%',
-                objectFit: 'cover',
-                width: '100%'
-              }}/> 
-            </div>
-            <div className={styles.getproductItemdetails}>
-              <h2 className={styles.getproductItemTitle}>{title}</h2>
-                <div className={styles.getproductBtn}><Link className={styles.getproduct} href={link}>buy now</Link></div>
-            </div>
-          </li>
-        ))}
-      </ul>
+    <section className={`${styles.getProductSection} parallax-section`}>
+      <div className={styles.getProductContant}>
+        <Image 
+          src="/loofah.png"
+          alt="Get Our Products"
+          width={150}
+          height={150}
+        />
+        <h1 className={`${styles.getProductHeader} header-section`}>Get Our Products</h1>
+        <p className={`${styles.getProductText}`}>
+          Experience the best with our premium products.
+        </p>
+        <button className={`${styles.getProductButton}   `}>
+          Shop Now
+        </button>
+      </div>
     </section>
   );
 }

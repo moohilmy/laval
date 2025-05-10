@@ -44,8 +44,8 @@ export default function NavLinks({ links }: NavLinksProps) {
         <Image
           src={isMenuOpen ? "/x.svg" : "/menu.svg"}
           alt="menu button"
-          width={40}
-          height={40}
+          width={24}
+          height={24}
         />
       </button>
 

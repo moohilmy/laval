@@ -13,7 +13,7 @@ export default function Footer() {
           href={"https://www.linkedin.com/in/mohamed-helmy-92a70b245/"}
           className={"link"}
         />
-        <span>hilmy dev</span>
+        <span>helmy dev</span>
       </div>
     </footer>
   );

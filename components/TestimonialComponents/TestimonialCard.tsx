@@ -1,31 +1,25 @@
 import React from "react";
 import styles from "./style.module.css";
-import Image from "next/image";
-const  TestimonialCard = () => {
+
+const TestimonialCard = () => {
   return (
-    <div className={styles.TestimonialCard}>
-      <div className={styles.TestimonialCardHero}>
-        <Image
-          height={60}
-          width={60}
-          alt={"person-name"}
-          src={"/person.png"}
-          style={{
-            height: "100%",
-            width: "100%",
-            objectFit: "cover",
-          }}
-        />
+    <div className={styles.TestamonialCard}>
+      <div className={styles.TestimonialCardContent}>
+        <h2 className={styles.TestamonialName}>tesla boy</h2>
+        <p className={styles.TestamonialDescription}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+          voluptatibus, cumque, voluptates, quibusdam quisquam voluptatibus
+          cumque voluptates quibusdam quisquam voluptatibus cumque voluptates
+          quibusdam.
+        </p>
       </div>
-      <div className={styles.TestimonialText}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea enim
-        officiis ipsa!
-      </div>
-      <div>
-        <p className={styles.TestimonialName}>tesla boy</p>
+      <div className={styles.TestimonialCardImage}>
+        <div className={styles.TestimonialCardImageContainer}>
+
+        </div>
       </div>
     </div>
   );
-}
+};
 
-export default TestimonialCard
+export default TestimonialCard;

@@ -1,7 +1,7 @@
 "use client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm, SubmitHandler } from "react-hook-form";
-import { motion } from "framer-motion";
+
 import { z } from "zod";
 import InputField from "./InputField";
 import { toast } from "react-toastify";
@@ -53,11 +53,7 @@ const ContactForm = () => {
   };
 
   return (
-    <motion.form
-      initial={{ opacity: 0, x: -50 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      transition={{ duration: 1, delay: .2 }}
-      viewport={{ once: true }}
+    <form
       className={`${styles.fromSecton} `}
       onSubmit={handleSubmit(onSubmit)}
     >
@@ -97,7 +93,7 @@ const ContactForm = () => {
       >
         {isSubmitting ? "Loading..." : "Send Message"}
       </button>
-    </motion.form>
+    </form>
   );
 };
 

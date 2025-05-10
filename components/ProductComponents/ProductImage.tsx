@@ -42,7 +42,7 @@ export default function ProductImage() {
     >
       <div
         ref={root}
-        className={`product-image-container ${styles.openBagImgContainer}`}
+        className={`product-image-container wrapper-page ${styles.openBagImgContainer}`}
       >
         <div className={`${styles.openBagImg} open-bag-anime`}>
           <Image
