@@ -1,48 +1,59 @@
-.inputFieldContainer{
-    width: 100%;
-    margin-bottom: .5rem;
+.inputFieldContainer {
+  width: 100%;
+  margin-bottom: 0.5rem;
 }
-.inputFieldInfo{
-    display: flex;
-    margin-bottom: 0.5rem;
-    justify-content: space-between;
+.inputFieldInfo {
+  display: flex;
+  margin-bottom: 0.5rem;
+  justify-content: space-between;
 }
-.inputField{
-    width: 100%;
-    padding: .5rem 1rem;
-    border-radius: .5rem;
-    outline-color:var(--second-color);
+.inputField {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  outline-color: var(--second-color);
 }
-.fromSecton{
-    width: 50%;
-    padding: 1rem 2rem;
-    border-radius: .75rem;
-    background: linear-gradient(90deg, rgb(232, 210, 192) 0%, rgb(217, 180, 152) 100%);
-    border: 1px solid var(--border-color);
+.fromSecton {
+  flex-basis: 40%;
+  padding: 1rem 2rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(
+    90deg,
+    rgb(232, 210, 192) 0%,
+    rgb(217, 180, 152) 100%
+  );
+  border: 1px solid var(--border-color);
 }
-.textareaField{
-    resize: none;
-    width: 100%;
-    padding: .5rem 1rem;
-    outline-color: var(--second-color);
-    border-radius: .5rem;
+.textareaField {
+  resize: none;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  outline-color: var(--second-color);
+  border-radius: 0.5rem;
+}
+.submitBtn {
+  width: 100%;
+  margin-top: 0.75rem;
+  padding: 0.75rem 0;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  background-color: var(--second-color);
+  color: var(--background);
+  transition: all 0.25s;
+}
+.submitBtn:hover {
+  background-color: var(--primary);
+}
 
+.landingContentSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.submitBtn{
-    width: 100%;
-    margin-top: .75rem;
-    padding: .75rem 0;
-    font-weight: 700;
-    border-radius: .5rem;
-    background-color: var(--second-color);
-    color: var(--background);
-    transition: all .25s;
-}
-.submitBtn:hover{
-    background-color: var(--primary);
-}
-@media (max-width: 680px){
-    .fromSecton{
-        width: 100%;
-    }
+
+
+@media (max-width: 768px) {
+  .fromSecton {
+    flex-basis: 100%;
+  }
 }

@@ -12,7 +12,7 @@ export default function ProductDetails() {
             <p className={styles.productDescription}>Discover the secret of ancient Egyptian skincare with LAVAL – 100% natural loofah handpicked from the fertile lands of the Nile. Grown under the warm Egyptian sun and traditionally processed to preserve its strength and purity, our loofah is perfect for exfoliating, stimulating blood circulation, and leaving your skin glowing.</p>
         </div>
         <div className={styles.productContentImg}>
-            <Image loading="lazy" src={'/ads.png'} alt="ads" width={600} height={600} style={{ width: "100%", height: "100%", objectFit: "cover" }}/>
+            <Image loading="lazy" src={'/ads.png'} alt="ads" width={500} height={500} style={{ width: "100%", height: "100%", objectFit: "cover" }}/>
         </div>
       </div>
     </section>

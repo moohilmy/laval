@@ -8,8 +8,8 @@ export default function GetProducts() {
         <Image 
           src="/loofah.png"
           alt="Get Our Products"
-          width={150}
-          height={150}
+          width={125}
+          height={125}
         />
         <h1 className={`${styles.getProductHeader} header-section`}>Get Our Products</h1>
         <p className={`${styles.getProductText}`}>

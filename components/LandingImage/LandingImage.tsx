@@ -64,6 +64,7 @@ export default function LandingImage() {
               className={`${styles.backGroundImg} swep-animate`}
               alt="background-img"
               src={bgImage}
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               priority={true} 
             />
           </motion.div>
@@ -82,6 +83,7 @@ export default function LandingImage() {
               className={`${styles.backGroundImg} swep-animate`}
               src={bgImage} 
               priority={true} 
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{transform: 'scaleX(-1)'}}
             />
           </motion.div>
@@ -98,7 +100,7 @@ export default function LandingImage() {
             opacity: { duration: 1.2, delay: 0, ease: "linear" }, // تظهر في ثانية
           }}
         >
-          <Image fill priority={true}  alt="front" src={frontImg} style={{ objectFit: "cover" }} />
+          <Image fill priority={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="front" src={frontImg} style={{ objectFit: "cover" }} />
         </motion.div>
 
         {/* Bag Image */}
