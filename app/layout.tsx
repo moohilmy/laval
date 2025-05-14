@@ -4,6 +4,7 @@ import "./globals.css";
 import React from "react";
 import { Footer, Header } from "@/components";
 import { ToastContainer } from 'react-toastify';
+import { Analytics } from "@vercel/analytics/next"
 const cinzel = Cinzel({
   variable: "--font-Cinzel",
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
         {children}
         <Footer/>
         </div>
+        <Analytics/>
       </body>
     </html>
   );
