@@ -29,7 +29,7 @@ export const textFont = localFont({
       weight: "700",
     },
     {
-      path: "../public/fonts/Degular/text/DegularText-SemiBold.otf",
+      path: "../public/fonts/Degular/text/DegularText-Semibold.otf",
       style: "normal",
       weight: "600",
     },
