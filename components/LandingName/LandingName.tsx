@@ -49,7 +49,7 @@ export default function LandingName() {
           viewport={{ amount: 0.5, once: true }}
           className={styles.brandName}
         >
-          Laval
+          rinarah
         </motion.p>
       </div>
       <div>
@@ -72,9 +72,9 @@ export default function LandingName() {
             },
           }}
           viewport={{ amount: 0.2, once: true }}
-          className={`${styles.brandSlogan} subFont`}
+          className={`${styles.brandSlogan}`}
         >
-          pure by nature
+          Inspired By Nature
         </motion.p>
       </div>
     </section>

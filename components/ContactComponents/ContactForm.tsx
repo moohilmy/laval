@@ -6,6 +6,7 @@ import { z } from "zod";
 import InputField from "./InputField";
 import { toast } from "react-toastify";
 import styles from './styles.module.css'
+import { useEffect, useState } from "react";
 const validationSchema = z.object({
   name: z.string().min(3).max(50),
   email: z.string().email({ message: "Please enter a valid email" }),
@@ -30,7 +31,7 @@ const ContactForm = () => {
 
   const onSubmit: SubmitHandler<IContactForm> = async (data) => {
     try {
-      const response = await fetch("/api/send-email", {
+      const response = await fetch("/api/email/req-email", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),
@@ -51,7 +52,24 @@ const ContactForm = () => {
       }
     }
   };
+   const [hydrated, setHydrated] = useState(false);
 
+  useEffect(() => {
+    setHydrated(true);
+  }, []);
+  if(!hydrated){
+    return(
+      <div className={styles.fromSecton}>
+        <div className={styles.inputFieldContainerSkeleton}></div>
+        <div className={styles.inputFieldContainerSkeleton}></div>
+        <div>
+          <div className={styles.inputFieldInfoSkeleton}></div>
+  
+        </div>
+        <div className={`rinarahBtn w-full ${styles.btnSkeleton}`}></div>
+      </div>
+    )
+  }
   return (
     <form
       className={`${styles.fromSecton} `}
@@ -88,7 +106,7 @@ const ContactForm = () => {
       </div>
       <button
         type="submit"
-        className={styles.submitBtn}
+        className={'rinarahBtn w-full'}
         disabled={isSubmitting}
       >
         {isSubmitting ? "Loading..." : "Send Message"}

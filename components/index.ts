@@ -5,9 +5,18 @@ import ProductImage from "./ProductComponents/ProductImage";
 import ProductContent from "./ProductComponents/ProductContent";
 import GetProducts from "./ProductComponents/GetProducts";
 import ProductDetails from "./ProductComponents/ProductDetails";
-import TestimonialCard from "./TestimonialComponents/TestimonialCard";
 import ContactForm from "./ContactComponents/ContactForm";
 import LandingContent from "./ContactComponents/LandingContent";
 import Footer from "./Footer/Footer";
-export {Header, LandingImage, LandingName, ProductContent,ProductImage, ProductDetails, GetProducts,TestimonialCard,ContactForm,Footer,LandingContent
+
+//pages components 
+import ProductCard from "./ProductPageComponents/ProductCard/ProductCard";
+import ProuctImageBox from "./ProductPageComponents/ProuctImageBox/ProuctImageBox";
+
+// check out the components folder structure
+import CheckoutList from "./CheckoutComponents/CheckoutList/CheckoutList";
+import CheckoutForm from "./CheckoutComponents/CheckoutForm/CheckoutForm";
+import ShippingList from "./CheckoutComponents/ShippingList/ShippingList";
+import PaymentSection from "./PaymentSection/PaymentSection";
+export {Header, LandingImage, LandingName, ProductContent,ProductImage, ProductDetails, GetProducts,ContactForm,Footer,LandingContent,ProductCard,ProuctImageBox, CheckoutList,CheckoutForm, ShippingList, PaymentSection  
 }

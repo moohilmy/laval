@@ -43,29 +43,33 @@
   color: var(--text-color);
   overflow: hidden;
   position: relative;
+  flex-direction: column-reverse;
+  width: 22rem;
+  aspect-ratio: 11/16;
   border-radius: 0.7rem;
 }
 .productContent {
-  padding-left: 1rem;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
   z-index: 1;
-  position: relative;
+  padding: 1rem 1.5rem;
+  position: absolute;
+  background: linear-gradient(to top, var(--gradient-color) 0%, transparent);
+  color: var(--background);
+  bottom: 0;
 }
 .productDetailsHeader {
-  font-size: 2rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
   font-weight: 700;
-  margin-bottom: 1.2rem;
   text-transform: capitalize;
 }
 .productDescription {
-  font-size: 1.2rem;
-  width: 85%;
+  font-size: .8rem;
+  font-family: var(--font-degular-text);
 }
 .productContentImg {
   position: relative;
-  min-width: 25%;
-  aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
 }
 /*end product details style*/
 /*Get product*/
@@ -80,35 +84,24 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
-.getProductContant{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: .5rem;
-    text-align: center;
-    width: 100%;
-    height: 100%;
+.getProductContant {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+  width: 100%;
+  height: 100%;
 }
-.getProductHeader{
-    color: var(--background);
+.getProductHeader {
+  color: var(--background);
 }
-.getProductText{
-    color: var(--background);
-    font-size: 1.6rem;
+.getProductText {
+  color: var(--background);
+  font-size: 1.6rem;
 }
-.getProductButton{
-    margin-top: 1.5rem;
-    padding: 0.6rem 1.2rem;
-    background: var(--primary);
-    color: var(--background);
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-.getProductButton:hover{
-    background: var(--second-color);
-}
+
 /*end get product style*/
 @media (max-width: 1020px) {
   .getproductItem {
@@ -151,11 +144,11 @@
 
   /*end product details style*/
   /*Get product*/
-  .getProductHeader{
+  .getProductHeader {
     font-size: 1.6rem;
   }
-  .getProductText{
+  .getProductText {
     font-size: 1rem;
-}
+  }
   /*end get product style*/
 }

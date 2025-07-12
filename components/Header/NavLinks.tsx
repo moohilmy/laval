@@ -3,8 +3,10 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import styles from "./styles.module.css";
 
+import Link from "next/link";
+import { CheckoutElemant } from "@/elements";
 interface NavLinksProps {
-  links: string[];
+  links: { href: string; name: string }[];
 }
 
 export default function NavLinks({ links }: NavLinksProps) {
@@ -25,45 +27,58 @@ export default function NavLinks({ links }: NavLinksProps) {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const toggleMenu = () => setIsMenuOpen(prev => !prev);
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
-  };
+  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
   return (
-    <nav className={styles.navContainer}>
-      <button
-        onClick={toggleMenu}
-        aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        className={styles.menuBtn}
-      >
-        <Image
-          src={isMenuOpen ? "/x.svg" : "/menu.svg"}
-          alt="menu button"
-          width={24}
-          height={24}
-        />
-      </button>
+    <div className={styles.navContainer}>
+      <nav className={styles.navContainer}>
+        <button
+          onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          className={styles.menuBtn}
+        >
+          <Image
+            src={isMenuOpen ? "/x.svg" : "/menu.svg"}
+            alt="menu button"
+            width={24}
+            height={24}
+          />
+        </button>
 
-      <ul className={`${styles.navList} ${isMenuOpen ? styles.navListActive : ""}`}>
-        {links.map((link) => (
+        <ul
+          className={`${styles.navList} ${
+            isMenuOpen ? styles.navListActive : ""
+          }`}
+        >
+          {links.map((link, index) => (
             <li
-              key={link.toLowerCase()}
               className={styles.navItem}
+              key={index}
               onClick={() => {
                 setIsMenuOpen(false);
-                scrollToSection(link.toLowerCase());
               }}
             >
-              {link.toLowerCase()}
+              <Link
+                href={link.href}
+                className="rinaralink"
+                aria-label={link.name}
+              />
+              {link.name}
             </li>
-          )
-        )}
-      </ul>
-    </nav>
+          ))}
+        </ul>
+      </nav>
+      <div className={styles.cartItem}>
+        <Link
+          href={"/checkout"}
+          onClick={() => {
+            setIsMenuOpen(false);
+          }}
+          className="rinaralink"
+          aria-label="shopping-cart"
+        />
+        <CheckoutElemant />
+      </div>
+    </div>
   );
 }

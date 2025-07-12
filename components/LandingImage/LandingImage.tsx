@@ -65,7 +65,7 @@ export default function LandingImage() {
               alt="background-img"
               src={bgImage}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              priority={true} 
+              
             />
           </motion.div>
           <motion.div
@@ -82,7 +82,7 @@ export default function LandingImage() {
               alt="background-img"
               className={`${styles.backGroundImg} swep-animate`}
               src={bgImage} 
-              priority={true} 
+              loading='eager'
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               style={{transform: 'scaleX(-1)'}}
             />
@@ -100,7 +100,7 @@ export default function LandingImage() {
             opacity: { duration: 1.2, delay: 0, ease: "linear" }, // تظهر في ثانية
           }}
         >
-          <Image fill priority={true} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="front" src={frontImg} style={{ objectFit: "cover" }} />
+          <Image fill fetchPriority='high'   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="front" src={frontImg} style={{ objectFit: "cover" }} />
         </motion.div>
 
         {/* Bag Image */}
@@ -115,7 +115,7 @@ export default function LandingImage() {
                 y: { duration: 1, delay: .25, ease: 'linear' },
               }}
           >
-            <Image priority={true}  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="bag" src={bagImage}  style={{
+            <Image fetchPriority='high'  fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" alt="bag" src={bagImage}  style={{
               objectFit: 'contain'
             }}/>
           </motion.div>

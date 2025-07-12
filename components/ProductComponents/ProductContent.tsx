@@ -14,7 +14,7 @@ export default function ProductContent() {
         viewport={{amount: .8 , once: true}}
         className={`${styles.prouductHeader} header-section`}
       >
-        our Product
+        our Products
       </motion.h2>
     </div>
   );

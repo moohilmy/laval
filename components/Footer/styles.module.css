@@ -2,12 +2,9 @@
     padding: 1rem 2rem;
     justify-content: space-between;
     align-items: center;
-    background: var(--third-color);
-    color: var(--text-color);
+    background: var(--second-color);
+    color: var(--first-linear-color);
     display: flex;
-}
-.copyrightText,.Devlink{
-    font-size: .9rem;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: .7;

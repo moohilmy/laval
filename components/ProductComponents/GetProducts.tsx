@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./style.module.css";
+import Link from "next/link";
 export default function GetProducts() {
   return (
     <section className={`${styles.getProductSection} parallax-section`}>
@@ -15,9 +16,9 @@ export default function GetProducts() {
         <p className={`${styles.getProductText}`}>
           Experience the best with our premium products.
         </p>
-        <button className={`${styles.getProductButton}   `}>
+        <Link href={'/products'} className={`rinarahBtn`}>
           Shop Now
-        </button>
+        </Link>
       </div>
     </section>
   );
